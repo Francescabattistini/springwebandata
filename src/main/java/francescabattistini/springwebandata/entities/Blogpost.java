@@ -1,19 +1,27 @@
 package francescabattistini.springwebandata.entities;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
 @Setter
 @Getter
 @ToString
+@NoArgsConstructor
+@Entity
+@Table(name= "blogpost")
 public class Blogpost {
+    @Id
+    @GeneratedValue
+    @Setter(AccessLevel.NONE)
      private int id;
     private String categoria;
     private String titolo;
     private String cover;
     private String contenuto;
     private int tempoDiLettura;
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private Author autor;
 
     public Blogpost(String categoria, String titolo, String contenuto, int tempoDiLetturo) {
         this.categoria = categoria;

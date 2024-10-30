@@ -1,8 +1,9 @@
 package francescabattistini.springwebandata.services;
 
-import francescaBattistini.esercizioS6L2.entities.Author;
-import francescaBattistini.esercizioS6L2.exceptions.NotFoundExceptions;
-import francescaBattistini.esercizioS6L2.payloads.AuthorPayload;
+
+import francescabattistini.springwebandata.entities.Author;
+import francescabattistini.springwebandata.exceptions.NotFoundExceptions;
+import francescabattistini.springwebandata.payloads.AuthorPayload;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +24,6 @@ public class AuthorService {
         Random random = new Random();
         Author newAuthor = new Author(body.getNome(), body.getCognome(),
         body.getEmail(), body.getDataDiNascita());
-        newAuthor.setId(random.nextInt(1, 1000));
         this.authorList.add(newAuthor);
         return newAuthor;
     }

@@ -1,8 +1,8 @@
 package francescabattistini.springwebandata.services;
 
-import francescaBattistini.esercizioS6L2.entities.Blogpost;
-import francescaBattistini.esercizioS6L2.exceptions.NotFoundExceptions;
-import francescaBattistini.esercizioS6L2.payloads.BlogPayload;
+import francescabattistini.springwebandata.entities.Blogpost;
+import francescabattistini.springwebandata.exceptions.NotFoundExceptions;
+import francescabattistini.springwebandata.payloads.BlogPayload;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,7 +23,6 @@ public class BlogService {
         Random random = new Random();
         Blogpost newBlogPost = new Blogpost(body.getCategoria(), body.getTitolo(),
                 body.getContenuto(), body.getTempoDiLettura());
-        newBlogPost.setId(random.nextInt(1, 1000));
         newBlogPost.setCover("https://placedog.net/400x200");// attributi da settare
         this.blogList.add(newBlogPost);
         return newBlogPost;

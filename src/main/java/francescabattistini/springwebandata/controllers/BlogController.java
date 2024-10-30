@@ -1,8 +1,9 @@
 package francescabattistini.springwebandata.controllers;
 
-import francescaBattistini.esercizioS6L2.entities.Blogpost;
-import francescaBattistini.esercizioS6L2.payloads.BlogPayload;
-import francescaBattistini.esercizioS6L2.services.BlogService;
+
+import francescabattistini.springwebandata.entities.Blogpost;
+import francescabattistini.springwebandata.payloads.BlogPayload;
+import francescabattistini.springwebandata.services.BlogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

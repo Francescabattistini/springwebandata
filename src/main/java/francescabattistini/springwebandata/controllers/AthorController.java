@@ -1,8 +1,8 @@
 package francescabattistini.springwebandata.controllers;
 
-import francescaBattistini.esercizioS6L2.entities.Author;
-import francescaBattistini.esercizioS6L2.payloads.AuthorPayload;
-import francescaBattistini.esercizioS6L2.services.AuthorService;
+import francescabattistini.springwebandata.entities.Author;
+import francescabattistini.springwebandata.payloads.AuthorPayload;
+import francescabattistini.springwebandata.services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
