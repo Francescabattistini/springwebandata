@@ -1,7 +1,6 @@
 package francescabattistini.springwebandata.controllers;
 
 import francescabattistini.springwebandata.entities.Author;
-import francescabattistini.springwebandata.payloads.AuthorPayload;
 import francescabattistini.springwebandata.services.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,12 +22,12 @@ import java.util.List;
 public class AthorController {
         //autowired per usare il service all'interno del controller
        @Autowired
-       private AuthorService authorservice;
+       AuthorService authorservice;
 
         // 1. GET http://localhost:3002/blogpost
         @GetMapping
-        public List<Author> getAuthor(){
-           return this.authorservice.findAllAuthore();
+        public List<Author> findAll(){
+           return this.authorservice.findAll();
         }
 
 
@@ -36,12 +35,12 @@ public class AthorController {
 
         @PostMapping
         @ResponseStatus(HttpStatus.CREATED)//201 per la risposta local
-        public Author createAuthor(@RequestBody AuthorPayload body){
-            return this.authorservice.saveAuthorPost(body);
+        public Author createAuthor(@RequestBody Author body){
+            return this.authorservice.save(body);
         }
 
 
-        //3. Get http://localhost:3002/blogpost ( utente specifico)
+       /* //3. Get http://localhost:3002/blogpost ( utente specifico)
         @GetMapping("/{blogId}")
         public Author findAuthorByid(@PathVariable int authorId){
             return this.authorservice.findAuthorById(authorId);
@@ -63,5 +62,5 @@ public class AthorController {
         @ResponseStatus(HttpStatus.NO_CONTENT)//204
         public void findAuthorIdAndDelate(@PathVariable int authorId){
             this.authorservice.findauthorByIdAndDelete(authorId);
-        }
+        }*/
 }

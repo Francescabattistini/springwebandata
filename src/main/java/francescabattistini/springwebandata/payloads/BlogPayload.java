@@ -14,4 +14,5 @@ public class BlogPayload {// Rappresenta il body della richiesta di salvataggio 
     private String titolo;
     private String contenuto;
     private int tempoDiLettura;
+    private int authorId;
 }

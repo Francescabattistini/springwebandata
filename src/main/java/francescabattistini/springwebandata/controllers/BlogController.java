@@ -18,6 +18,7 @@ import java.util.List;
 5. DELETE http://localhost:3001/users/{userId}
 
 */
+/*
 @RestController
 @RequestMapping("/blogpost")
 public class BlogController {
@@ -65,4 +66,4 @@ return this.blogservice.saveBlogPost(body);
         this.blogservice.findByIdAndDelete(blogId);
 }
 
-}
+}*/
